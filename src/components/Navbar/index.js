@@ -3,15 +3,6 @@ import { getGames, getTopGames, searchCategories } from '../../api/twitch';
 import useProfile from '../../hooks/useProfile';
 import classes from './navbar.module.css';
 
-import Cerca from '../Cerca';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch
-} from 'react-router-dom'
-import Content from '../Content';
-
 
 const Navbar = (props) => {
   const { loading, error, user } = useProfile();
@@ -36,7 +27,7 @@ const Navbar = (props) => {
     function getCategories() { //callback uguale, ma mi riprendo le categorie
     props.setCategories(cate1)
   }
-  console.log("categorie in navbar", cate1)
+  //console.log("categorie in navbar", cate1)
 
 
 
@@ -44,16 +35,8 @@ const Navbar = (props) => {
   return (
     <nav className={classes.navbar}>
       <div className={classes.navbar__item}>
-        <Router>
-        <Link to='/Categorie'>Sfoglia categorie</Link>
-        <Link to='/TopGames'>Top games</Link>
-        <br></br>
-        <br></br>
-        <Switch>
-        <Route path='/Categorie' component={Cerca}></Route>
-      <Route path='/TopGames' component={Content}></Route>
-      </Switch>
-      </Router>
+        <a href="#" onClick={getCategories}>Sfoglia categorie</a>
+        <a href="#" onClick={getTopgames}>Top games</a>
       </div>
 
       <div className={classes.navbar__item}>

@@ -11,7 +11,7 @@ function Cerca() {
     function settaCategoria(){
     categoria = document.getElementById("CatSelez").value
         setIns(categoria)
-    console.log("categorie: ",inserisci)
+    //console.log("categorie: ",inserisci)
 }
 
 
@@ -19,14 +19,14 @@ useEffect(()=>{
     searchCategories({ query: `/${inserisci}` })
       .then(response => setCat(response.data))
     }, [inserisci])
-    console.log("setcat: ",cat2)
+    //console.log("setcat: ",cat2)
 
 
 
 return(
     <div>
     <select id="CatSelez">
-    <option value="">--NULL--</option>
+    <option value="">Seleziona una categoria</option>
                 <option value="Visual Novel">Visual Novel</option>
                 <option value="RTS">RTS</option>
                 <option value="Metroidvania">Metroidvania</option>

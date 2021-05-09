@@ -10,6 +10,5 @@ function Stampa(props){
             }
         </div>
     )
-
         }
         export default Stampa

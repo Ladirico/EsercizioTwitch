@@ -3,6 +3,7 @@ import {useState} from 'react'
 import Content from './components/Content';
 import Navbar from './components/Navbar';
 import useTwitchAuthentication from './hooks/useTwitchAuthentication';
+import Cerca from './components/Cerca/index.js'
 
 
 
@@ -32,7 +33,7 @@ function App() {
     <div className="App">
       <Navbar setCategories={getCat} setTopGames={getTop} />
       <Content passaCateg={categ} passaDati={data}/>
-      
+      <Cerca></Cerca>
     </div>
   );
 }
