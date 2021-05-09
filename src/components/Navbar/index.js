@@ -48,6 +48,7 @@ const Navbar = (props) => {
         <Link to='/Categorie'>Sfoglia categorie</Link>
         <Link to='/TopGames'>Top games</Link>
         <br></br>
+        <br></br>
         <Switch>
         <Route path='/Categorie' component={Cerca}></Route>
       <Route path='/TopGames' component={Content}></Route>
